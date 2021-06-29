@@ -113,6 +113,7 @@ h6 {
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 30px;
+  text-transform: uppercase;
   color: #555555;
   text-align: center;
   position: relative;
@@ -578,6 +579,131 @@ h6 {
   line-height: 15px;
 }
 
+.works {
+  padding: 100px 0;
+}
+
+.works__title {
+  margin-bottom: 30px;
+}
+
+.works__nav {
+  margin: 0 auto 70px;
+  max-width: 456px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works__nav-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  font-family: Roboto Slab;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 15px;
+  background-color: transparent;
+  color: #555555;
+}
+
+.works__nav-btn.active {
+  color: #c0301c;
+}
+
+.works__item {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.works__item.active {
+  display: grid;
+}
+
+.works__element {
+  position: relative;
+}
+
+.works__element:hover .works__shell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(192, 48, 28, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works__element img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.works__shell {
+  display: none;
+  color: #fff;
+}
+
+.works__name {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.works__cathegory {
+  font-family: Roboto Slab;
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.works__btn {
+  font-family: Roboto Slab;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 38px;
+  display: inline-block;
+  color: #c0301c;
+  background-color: #fff;
+  padding: 0 40px 0 20px;
+  position: relative;
+}
+
+.works__btn:active {
+  opacity: 0.6;
+}
+
+.works__btn::after {
+  content: url(../img/icons/works_arrow.svg);
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 960px;
@@ -615,6 +741,10 @@ h6 {
 
   .services__item:last-child {
     margin: 0;
+  }
+
+  .works__item {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   body.lock {
@@ -737,5 +867,9 @@ h6 {
     font-family: Roboto Slab;
     font-size: 14px;
     line-height: 24px;
+  }
+
+  .works__item {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
