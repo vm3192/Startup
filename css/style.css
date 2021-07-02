@@ -42,7 +42,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: "Montserrat";
+  font-family: Montserrat;
 }
 
 input,
@@ -634,6 +634,8 @@ h6 {
 
 .works__element {
   position: relative;
+  padding-top: 89%;
+  overflow: hidden;
 }
 
 .works__element:hover .works__shell {
@@ -660,6 +662,10 @@ h6 {
 
 .works__element img {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -737,15 +743,160 @@ h6 {
   margin-bottom: 45px;
 }
 
+.blog {
+  padding-top: 100px;
+}
+
+.blog__title {
+  margin-bottom: 25px;
+}
+
+.blog__subtitle {
+  margin-bottom: 60px;
+}
+
+.post {
+  margin-bottom: 40px;
+  float: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+.post:last-child {
+  border-bottom: none;
+  margin-bottom: 60px;
+}
+
+.post:hover a {
+  color: #c0301c;
+}
+
+.post__picture {
+  width: 40.3%;
+  padding-top: 28.3%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin: 0 40px 40px 0;
+}
+
+.post__picture img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post__content {
+  margin-bottom: 40px;
+}
+
+.post__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.post__date {
+  padding: 15px 20px;
+  margin-right: 25px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #777777;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #555555;
+}
+
+.post__date span {
+  display: block;
+  font-size: 14px;
+}
+
+.post__name a {
+  color: inherit;
+}
+
+.post__name a:hover {
+  text-decoration: underline;
+}
+
+.post__title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #555555;
+  text-transform: uppercase;
+}
+
+.post__subtitle {
+  font-family: Roboto Slab;
+  font-size: 13px;
+  line-height: 24px;
+  color: #777777;
+  font-style: italic;
+}
+
+.post__bottom p {
+  font-family: Roboto Slab;
+  font-size: 14px;
+  line-height: 24px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.post__bottom a {
+  color: inherit;
+}
+
+.post__bottom a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 960px;
+  }
+
+  .post {
+    padding-bottom: 20px;
+  }
+
+  .post:last-child {
+    padding-bottom: 0;
+    margin-bottom: 80px;
+  }
+
+  .post__picture {
+    margin: 0 20px 20px 0;
+  }
+
+  .post__content {
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 991px) {
   .container {
     max-width: 720px;
+  }
+
+  .post {
+    float: none;
+  }
+
+  .post:last-child {
+    margin-bottom: 100px;
+  }
+
+  .post__picture {
+    display: block;
+    float: none;
   }
 }
 
