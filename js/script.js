@@ -67,4 +67,8 @@ $(document).ready(function () {
 			}
 		}]
 	});
+	$('.bottom-slider__slider').slick({
+		arrows: false,
+		dots: true,
+	});
 });
